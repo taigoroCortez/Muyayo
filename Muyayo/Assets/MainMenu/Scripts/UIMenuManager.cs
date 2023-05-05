@@ -10,6 +10,11 @@ public class UIMenuManager : MonoBehaviour
     float timeAnimation = 0.25f;
     void Start()
     {
+        Screen.autorotateToLandscapeLeft = false;
+        Screen.autorotateToLandscapeRight = false;
+        Screen.autorotateToPortraitUpsideDown = false;
+        Screen.autorotateToPortrait = true;
+
         mainMenu.DOAnchorPos(Vector2.zero, 0.25f);
 
     }
