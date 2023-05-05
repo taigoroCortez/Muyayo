@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e9889a34a6f6f7248beb63c6d2ae37f5
+guid: 1cc23c331c6def64ea92ebb2b6390d09
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,133 +126,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Tacuara_0
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 583
-        width: 70
-        height: 314
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32842dcf5a347ee4eaa64ca99c1ee947
-      internalID: -1624080371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tacuara_1
-      rect:
-        serializedVersion: 2
-        x: 409
-        y: 579
-        width: 64
-        height: 317
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54936a50c8a8a2e4a8a1923b1aa8d92b
-      internalID: -302399770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tacuara_2
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 577
-        width: 97
-        height: 314
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afb68269c9516f249969fca8d5cd42bc
-      internalID: 1013717342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tacuara_3
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 155
-        width: 42
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a26c5dfc246b9346ab16180f9003b27
-      internalID: 813152760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tacuara_4
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 155
-        width: 63
-        height: 312
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0874c24ce12f0d45b9abedb2019b514
-      internalID: 1693270597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tacuara_5
-      rect:
-        serializedVersion: 2
-        x: 801
-        y: 159
-        width: 64
-        height: 314
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a1b7ecb5a43b2748a808de6da931490
-      internalID: -1407953710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -263,13 +137,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Tacuara_5: -1407953710
-      Tacuara_0: -1624080371
-      Tacuara_1: -302399770
-      Tacuara_2: 1013717342
-      Tacuara_4: 1693270597
-      Tacuara_3: 813152760
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
