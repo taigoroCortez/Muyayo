@@ -10,6 +10,10 @@ public class InitGameManager : MonoBehaviour
     public GameObject panelMenu;
     public GameObject goPlayer;
 
+
+    public GameObject[] test;
+    private int numBG;
+
     public bool initGame;
 
     private void Awake()
@@ -23,6 +27,16 @@ public class InitGameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        test = GameObject.FindGameObjectsWithTag("Background");
+        
+       foreach(var go in test)
+        {
+            go.SetActive(false);
+        }
+
+        var indexRandom = Random.Range(0, test.Length);
+        test[indexRandom].SetActive(true);
+
     }
 
     private void Start()
