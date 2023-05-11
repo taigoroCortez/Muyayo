@@ -9,6 +9,7 @@ TagManager:
   - ManagerSelectPlayer
   - Muyayo
   - Background
+  - PanelesInGame
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public bool initGame;
     int i = 0;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        FindObjectOfType<InitGameManager>().PlayGame += StarPosition;
+    }
     void Start()
     {
         initGame = false;
@@ -55,5 +59,11 @@ public class PlayerController : MonoBehaviour
         }
         
 
+    }
+
+    void StarPosition()
+    {
+        transform.position = new Vector3(-1.5f, 0f, 0f);
+        transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 }

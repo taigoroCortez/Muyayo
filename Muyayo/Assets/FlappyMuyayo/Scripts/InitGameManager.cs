@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class InitGameManager : MonoBehaviour
 {
+    public event Action PlayGame;
     private static InitGameManager instance;
     public static InitGameManager Instance => instance;
 
-    public GameObject panelMenu;
+    public GameObject[] panelesInGame;
+    int panelMenu = 2;
+    int panelInGame = 1;
+    int panelGameOver = 3;
+
     public GameObject goPlayer;
 
-
-    public GameObject[] test;
-    private int numBG;
 
     public bool initGame;
 
@@ -27,31 +29,45 @@ public class InitGameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        test = GameObject.FindGameObjectsWithTag("Background");
-        
-       foreach(var go in test)
-        {
-            go.SetActive(false);
-        }
-
-        var indexRandom = Random.Range(0, test.Length);
-        test[indexRandom].SetActive(true);
-
     }
 
     private void Start()
     {
-        panelMenu = GameObject.FindGameObjectWithTag("PanelMenu");
-        goPlayer = GameObject.Find("Player");
-   
+        goPlayer = GameObject.FindGameObjectWithTag("Player");
+        panelesInGame = GameObject.FindGameObjectsWithTag("PanelesInGame");
+
+        foreach(GameObject paneles in panelesInGame)
+        {
+            paneles.SetActive(false);
+        }
+        PanelMEnu(true);
+        
         initGame = false;
     }
     public void StarGame()
     {
-        panelMenu.gameObject.SetActive(false);
+        PanelMEnu(false);
+        PanelInGame(true);
         initGame = true;
-        goPlayer.transform.position = new Vector3(-1.5f, 0f, 0f);
-        goPlayer.transform.rotation = Quaternion.Euler(Vector3.zero);
 
+        //ejecuto el evento starGame
+        PlayGame?.Invoke();
+
+        //goPlayer.transform.position = new Vector3(-1.5f, 0f, 0f);
+        //goPlayer.transform.rotation = Quaternion.Euler(Vector3.zero);
+
+    }
+
+    void PanelGameOver()
+    {
+
+    }
+    void PanelInGame(bool value)
+    {
+        panelesInGame[panelInGame].SetActive(value);
+    }
+    void PanelMEnu(bool value)
+    {
+        panelesInGame[panelMenu].SetActive(value);
     }
 }
