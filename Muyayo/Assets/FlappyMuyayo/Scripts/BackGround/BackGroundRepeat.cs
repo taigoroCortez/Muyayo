@@ -10,7 +10,7 @@ public class BackGroundRepeat : MonoBehaviour
     {
         BoxCollider2D box = GetComponent<BoxCollider2D>();
         spriteWidth = box.size.x;
-        Debug.Log("box " + box.size);
+       
     }
 
     // Update is called once per frame

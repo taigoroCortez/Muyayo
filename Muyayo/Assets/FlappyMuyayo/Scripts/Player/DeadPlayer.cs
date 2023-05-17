@@ -5,14 +5,18 @@ using System;
 
 public class DeadPlayer : MonoBehaviour
 {
+    public event Action DiePlayer;
+
     PlayerController playerController;
     CameraShake cameraShake;
     private void Awake()
     {
         cameraShake = FindObjectOfType<CameraShake>();
         playerController = GetComponent<PlayerController>();
-        FindObjectOfType<DeadZoneSky>().CollisionPlayer += DeadSky;
-        FindObjectOfType<DeadZone>().CollisionPlayer += DeadGround;
+
+
+        //FindObjectOfType<DeadZoneSky>().CollisionPlayer += DeadSky;
+        //FindObjectOfType<DeadZone>().CollisionPlayer += DeadGround;
     }
     void Start()
     {
@@ -20,10 +24,6 @@ public class DeadPlayer : MonoBehaviour
     }
 
     
-    void Update()
-    {
-        
-    }
 
     public void DeadSky()
     {
@@ -33,7 +33,7 @@ public class DeadPlayer : MonoBehaviour
     public void DeadGround()
     {
         Dead();
-        Destroy(gameObject,3f);
+        
         cameraShake.ShakeCamera(0.2f,0.3f);
     }
 
@@ -42,5 +42,7 @@ public class DeadPlayer : MonoBehaviour
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
         playerController.enabled = false;
+
+        DiePlayer?.Invoke();
     }
 }

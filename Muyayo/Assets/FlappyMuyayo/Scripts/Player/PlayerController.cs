@@ -7,41 +7,43 @@ public class PlayerController : MonoBehaviour
     Vector3 rotationSkin;
     [SerializeField] private float speed = 4f;
     bool move = false;
-    public bool initGame;
+    public bool initMove;
     int i = 0;
     // Start is called before the first frame update
     private void Awake()
     {
-        FindObjectOfType<InitGameManager>().PlayGame += StarPosition;
+        FindObjectOfType<PanelMenuButton>().playEvent += StarPosition;
     }
     void Start()
     {
-        initGame = false;
+        initMove = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (InitGameManager.Instance.initGame)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 i++;
                 move = !move;
-                Debug.Log(i);
+                Debug.Log("I " + i);
             }
             if (i >= 1)
             {
-                initGame = true;
+                initMove = true;
+                i = 0;
+                Debug.Log("I " + i);
             }
-            
         }
-
-        if (initGame)
+        
+        if (initMove)
         {
             if (move)
             {
-                transform.Translate(Vector2.up * Time.deltaTime);
+                transform.Translate(Vector2.up * speed * Time.deltaTime);
 
                 transform.GetChild(0).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 25f));
                 transform.GetChild(1).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 25f));
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                transform.Translate(Vector2.down * Time.deltaTime);
+                transform.Translate(Vector2.down * speed * Time.deltaTime);
 
                 transform.GetChild(0).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -25f));
                 transform.GetChild(1).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -25f));
@@ -57,7 +59,6 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        
 
     }
 

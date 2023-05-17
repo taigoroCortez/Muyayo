@@ -16,10 +16,4 @@ public class SelectBackground : MonoBehaviour
         var indexRandom = Random.Range(0, backgrounds.Length);
         backgrounds[indexRandom].SetActive(true);
     }
-    void Start()
-    {
-        
-    }
-
-  
 }

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/MainMenu/Scenes/MainMenu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/FlappyMuyayo/Scene/FlappyMuyayo.unity
+    path: Assets/FlappyMuyayo/Scene/MenuFlappyMuyayo.unity
     guid: 72d534b7e9f6db14784a66c7781720b7
+  - enabled: 1
+    path: Assets/TestRestar/RestarTest.unity
+    guid: d2511b3e34efa8a4ba518b9da7ab3ce6
   m_configObjects: {}

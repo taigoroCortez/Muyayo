@@ -4,12 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PanelMenu
-  - PanelInGame
   - ManagerSelectPlayer
   - Muyayo
   - Background
-  - PanelesInGame
+  - ButtonPlay
+  - Paneles
   layers:
   - Default
   - TransparentFX

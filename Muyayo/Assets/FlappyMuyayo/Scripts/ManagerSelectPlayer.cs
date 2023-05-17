@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class ManagerSelectPlayer : MonoBehaviour
 {
-    
+    private static ManagerSelectPlayer instance;
+    public static ManagerSelectPlayer Instance => instance;
     
 
     [SerializeField] private int NumberPlayers = 3;
     public int player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        DontDestroyOnLoad(this.gameObject);
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        FindObjectOfType<PanelMenuButton>().nextEvent += ChangePlayerSkin;
+
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
+    
 
     public void ChangePlayerSkin()
     {
@@ -45,10 +50,5 @@ public class ManagerSelectPlayer : MonoBehaviour
         JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("datos"), this);
     }
 
-    public void StartGame()
-    {
-       
-        
-        
-    }
+ 
 }

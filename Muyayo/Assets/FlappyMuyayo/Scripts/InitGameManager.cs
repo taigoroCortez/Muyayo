@@ -1,26 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
+
 public class InitGameManager : MonoBehaviour
 {
-    public event Action PlayGame;
+    #region Singleton
     private static InitGameManager instance;
     public static InitGameManager Instance => instance;
+    #endregion
 
-    public GameObject[] panelesInGame;
-    int panelMenu = 2;
-    int panelInGame = 1;
-    int panelGameOver = 3;
-
-    public GameObject goPlayer;
-
-
-    public bool initGame;
+    
+    
+    
+    public bool initGame = false;
 
     private void Awake()
     {
-        if(instance != null && instance != this)
+        if (instance != null && instance != this)
         {
             Destroy(gameObject);
         }
@@ -29,45 +27,22 @@ public class InitGameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        FindObjectOfType<PanelMenuButton>().playEvent += StarGame;
     }
 
     private void Start()
     {
-        goPlayer = GameObject.FindGameObjectWithTag("Player");
-        panelesInGame = GameObject.FindGameObjectsWithTag("PanelesInGame");
-
-        foreach(GameObject paneles in panelesInGame)
-        {
-            paneles.SetActive(false);
-        }
-        PanelMEnu(true);
-        
         initGame = false;
     }
+
+
+    //aqui se ejecuta desde editor con el onclickeditor
     public void StarGame()
     {
-        PanelMEnu(false);
-        PanelInGame(true);
         initGame = true;
-
-        //ejecuto el evento starGame
-        PlayGame?.Invoke();
-
-        //goPlayer.transform.position = new Vector3(-1.5f, 0f, 0f);
-        //goPlayer.transform.rotation = Quaternion.Euler(Vector3.zero);
-
+        Debug.Log("InitGame " + initGame);
+        
     }
-
-    void PanelGameOver()
-    {
-
-    }
-    void PanelInGame(bool value)
-    {
-        panelesInGame[panelInGame].SetActive(value);
-    }
-    void PanelMEnu(bool value)
-    {
-        panelesInGame[panelMenu].SetActive(value);
-    }
+    
+   
 }

@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class SelectPlayerInGame : MonoBehaviour
 {
+    PlayerController playerController;
     public ManagerSelectPlayer managerSelectPlayer;
     public GameObject[] playerInGame;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        FindObjectOfType<PanelMenuButton>().playEvent += ActivePlayerController;
+    }
     void Start()
     {
+        playerController = GetComponent<PlayerController>();
+        playerController.enabled = false;
+
+ 
         managerSelectPlayer = GameObject.FindGameObjectWithTag("ManagerSelectPlayer").GetComponent<ManagerSelectPlayer>();
     }
 
@@ -33,5 +43,10 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[1].SetActive(false);
             playerInGame[2].SetActive(true);
         }
+    }
+
+    void ActivePlayerController()
+    {
+        playerController.enabled = true;
     }
 }

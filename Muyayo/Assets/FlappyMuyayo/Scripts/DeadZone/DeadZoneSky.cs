@@ -4,7 +4,7 @@ using System;
 
 public class DeadZoneSky : MonoBehaviour
 {
-    public event Action CollisionPlayer;
+    //public event Action CollisionPlayer;
 
     private void Awake()
     {
@@ -14,9 +14,7 @@ public class DeadZoneSky : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Muere el jugador arriba");
-            CollisionPlayer?.Invoke();
-
+            //CollisionPlayer?.Invoke();
         }
     }
     
