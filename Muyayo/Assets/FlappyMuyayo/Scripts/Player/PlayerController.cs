@@ -29,13 +29,11 @@ public class PlayerController : MonoBehaviour
             {
                 i++;
                 move = !move;
-                Debug.Log("I " + i);
             }
             if (i >= 1)
             {
                 initMove = true;
                 i = 0;
-                Debug.Log("I " + i);
             }
         }
         

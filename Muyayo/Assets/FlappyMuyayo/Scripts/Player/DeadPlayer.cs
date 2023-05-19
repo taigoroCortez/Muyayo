@@ -5,6 +5,7 @@ using System;
 
 public class DeadPlayer : MonoBehaviour
 {
+    public event Action DeadGroundPlayer;
     public event Action DiePlayer;
 
     PlayerController playerController;
@@ -15,8 +16,8 @@ public class DeadPlayer : MonoBehaviour
         playerController = GetComponent<PlayerController>();
 
 
-        //FindObjectOfType<DeadZoneSky>().CollisionPlayer += DeadSky;
-        //FindObjectOfType<DeadZone>().CollisionPlayer += DeadGround;
+        FindObjectOfType<DeadZoneSky>().CollisionPlayer += DeadSky;
+        FindObjectOfType<DeadZone>().CollisionPlayer += DeadGround;
     }
     void Start()
     {
@@ -33,8 +34,7 @@ public class DeadPlayer : MonoBehaviour
     public void DeadGround()
     {
         Dead();
-        
-        cameraShake.ShakeCamera(0.2f,0.3f);
+        DeadGroundPlayer?.Invoke();
     }
 
     void Dead()

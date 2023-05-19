@@ -23,13 +23,11 @@ public class PanelMenuButton : MonoBehaviour
 
     private void OnPlayButtonPress()
     {
-        Debug.Log("Press Button Play");
         playEvent?.Invoke();
     }
 
     private void OnNextButtonPress()
     {
-        Debug.Log("Press Button NExt");
         nextEvent?.Invoke();
     }
 }

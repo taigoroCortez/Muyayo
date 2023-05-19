@@ -40,8 +40,6 @@ public class InitGameManager : MonoBehaviour
     public void StarGame()
     {
         initGame = true;
-        Debug.Log("InitGame " + initGame);
-        
     }
     
    

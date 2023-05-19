@@ -1,45 +1,46 @@
 using UnityEngine;
+using System.Collections;
 
 public class CameraShake : MonoBehaviour
 {
-    public Transform cameraTransform; // Referencia al transform de la cámara
-    public float shakeDuration = 0f; // Duración de la sacudida
-    public float shakeMagnitude = 0.7f; // Magnitud de la sacudida
 
-    private Vector3 originalPosition; // Posición original de la cámara
+    
+    public float shakeDuration = 0.2f; 
+    public float shakeMagnitude = 0.7f; 
+
+    private Vector3 originalPosition;
 
     void Awake()
     {
-        if (cameraTransform == null)
-        {
-            cameraTransform = GetComponent(typeof(Transform)) as Transform;
-        }
+        FindObjectOfType<DeadPlayer>().DeadGroundPlayer += Aviio;
+        
     }
-
-    void OnEnable()
+    private void Start()
     {
-        originalPosition = cameraTransform.localPosition;
+        originalPosition = transform.localPosition;
     }
 
-    void Update()
+    void Aviio()
     {
-        if (shakeDuration > 0)
-        {
-            cameraTransform.localPosition = originalPosition + Random.insideUnitSphere * shakeMagnitude;
-
-            shakeDuration -= Time.deltaTime;
-        }
-        else
-        {
-            shakeDuration = 0f;
-            cameraTransform.localPosition = originalPosition;
-        }
+        StartCoroutine(Shake());
     }
-
-    public void ShakeCamera(float duration, float magnitude)
+    public IEnumerator Shake()
     {
-        shakeDuration = duration;
-        shakeMagnitude = magnitude;
+        float elapsed = 0f;
+
+        while(elapsed < shakeDuration)
+        {
+            float x = Random.Range(-1f, 1f) * shakeMagnitude;
+            float y = Random.Range(-1f, 1f) * shakeMagnitude;
+
+            transform.localPosition = new Vector3(x, y, originalPosition.z);
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        transform.transform.localPosition = originalPosition;
     }
+   
 }
 
