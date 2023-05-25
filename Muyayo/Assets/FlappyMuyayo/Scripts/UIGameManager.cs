@@ -79,4 +79,6 @@ public class UIGameManager : MonoBehaviour
         buttonRestar.gameObject.SetActive(false);
         buttonExitApp.gameObject.SetActive(false);
     }
+
+    
 }

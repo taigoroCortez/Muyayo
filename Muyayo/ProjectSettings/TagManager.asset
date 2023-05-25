@@ -9,6 +9,7 @@ TagManager:
   - Background
   - ButtonPlay
   - Paneles
+  - Enemies
   layers:
   - Default
   - TransparentFX

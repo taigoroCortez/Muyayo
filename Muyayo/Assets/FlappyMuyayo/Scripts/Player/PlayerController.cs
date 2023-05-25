@@ -8,11 +8,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 4f;
     bool move = false;
     public bool initMove;
+    bool initMove2;
     int i = 0;
     // Start is called before the first frame update
     private void Awake()
     {
+        FindObjectOfType<PanelMenuButton>().playEvent += InitMovePlayer;
         FindObjectOfType<PanelMenuButton>().playEvent += StarPosition;
+        
     }
     void Start()
     {
@@ -22,22 +25,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (InitGameManager.Instance.initGame)
+
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                i++;
-                move = !move;
-            }
-            if (i >= 1)
-            {
-                initMove = true;
-                i = 0;
-            }
+            i++;
+            move = !move;
         }
-        
-        if (initMove)
+        if (i >= 1)
+        {
+            initMove2 = true;
+            i = 0;
+        }
+        if (initMove && initMove2)
         {
             if (move)
             {
@@ -60,9 +59,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void InitMovePlayer()
+    {
+        initMove = true;
+    }
     void StarPosition()
     {
-        transform.position = new Vector3(-1.5f, 0f, 0f);
         transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.position = new Vector3(-1.5f, 0f, 0f);
+        
     }
+    
 }

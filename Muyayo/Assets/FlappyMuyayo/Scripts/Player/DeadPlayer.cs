@@ -15,7 +15,6 @@ public class DeadPlayer : MonoBehaviour
         cameraShake = FindObjectOfType<CameraShake>();
         playerController = GetComponent<PlayerController>();
 
-
         FindObjectOfType<DeadZoneSky>().CollisionPlayer += DeadSky;
         FindObjectOfType<DeadZone>().CollisionPlayer += DeadGround;
     }
@@ -24,8 +23,14 @@ public class DeadPlayer : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemies"))
+        {
+            DeadSky();
+        }
+    }
     
-
     public void DeadSky()
     {
         Dead();
@@ -42,7 +47,11 @@ public class DeadPlayer : MonoBehaviour
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
         playerController.enabled = false;
-
         DiePlayer?.Invoke();
+    }
+
+    private void OnDisable()
+    {
+        
     }
 }
