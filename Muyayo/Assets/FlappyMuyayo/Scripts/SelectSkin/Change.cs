@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Change : MonoBehaviour
 {
+    public GameObject go1;
+    public GameObject go2;
+    public GameObject go3;
     public ManagerSelectPlayer managerSelectPlayer;
     // Start is called before the first frame update
     void Start()
@@ -18,22 +21,31 @@ public class Change : MonoBehaviour
         
         if(managerSelectPlayer.player == 1)
         {
-            transform.GetChild(0).gameObject.SetActive(true);
-            transform.GetChild(1).gameObject.SetActive(false);
-            transform.GetChild(2).gameObject.SetActive(false);
+            go1.gameObject.SetActive(true);
+            go2.gameObject.SetActive(false);
+            go3.gameObject.SetActive(false);
+            //transform.GetChild(0).gameObject.SetActive(true);
+            //transform.GetChild(1).gameObject.SetActive(false);
+            //transform.GetChild(2).gameObject.SetActive(false);
         }
         else if(managerSelectPlayer.player == 2)
         {
-            transform.GetChild(0).gameObject.SetActive(false);
-            transform.GetChild(1).gameObject.SetActive(true);
-            transform.GetChild(2).gameObject.SetActive(false);
+            go1.gameObject.SetActive(false);
+            go2.gameObject.SetActive(true);
+            go3.gameObject.SetActive(false);
+            //transform.GetChild(0).gameObject.SetActive(false);
+            //transform.GetChild(1).gameObject.SetActive(true);
+            //transform.GetChild(2).gameObject.SetActive(false);
 
         }
         else if(managerSelectPlayer.player == 3)
         {
-            transform.GetChild(0).gameObject.SetActive(false);
-            transform.GetChild(1).gameObject.SetActive(false);
-            transform.GetChild(2).gameObject.SetActive(true);
+            go1.gameObject.SetActive(false);
+            go2.gameObject.SetActive(false);
+            go3.gameObject.SetActive(true);
+            //transform.GetChild(0).gameObject.SetActive(false);
+            //transform.GetChild(1).gameObject.SetActive(false);
+            //transform.GetChild(2).gameObject.SetActive(true);
         }
     }
 }

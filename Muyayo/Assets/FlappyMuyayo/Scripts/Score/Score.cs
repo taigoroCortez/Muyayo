@@ -10,7 +10,7 @@ public class Score : MonoBehaviour
 
     private void Awake()
     {
-        FindObjectOfType<Coin>().collisionPlayer += AddScore;
+        FindObjectOfType<DeadPlayer>().collisionCoin += AddScore;
     }
     void Start()
     {

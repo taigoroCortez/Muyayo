@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
     void StarPosition()
     {
         transform.rotation = Quaternion.Euler(Vector3.zero);
-        transform.position = new Vector3(-1.5f, 0f, 0f);
+        transform.position = new Vector3(-2f, 0f, 0f);
         
     }
     

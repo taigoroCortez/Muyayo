@@ -263,8 +263,8 @@ GameObject:
   - component: {fileID: 5024910212306866966}
   - component: {fileID: 5024910212306866962}
   - component: {fileID: 5024910212306866961}
-  - component: {fileID: 5024910212306866960}
   - component: {fileID: 5024910212306866967}
+  - component: {fileID: 6932355673609722750}
   m_Layer: 0
   m_Name: BackGround_1 (1)
   m_TagString: Untagged
@@ -339,19 +339,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5024910212306866960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5024910212306866965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88f8be62454edf41a94b0e7aa131abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
 --- !u!114 &5024910212306866967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +351,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd588e169a8362498760bfdb8e37d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6932355673609722750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024910212306866965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &5024910212330588700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2039,7 @@ GameObject:
   - component: {fileID: 5024910213173991970}
   - component: {fileID: 5024910213173991969}
   - component: {fileID: 5024910213173991968}
+  - component: {fileID: 7690404237571185348}
   m_Layer: 0
   m_Name: Background_1 (1)
   m_TagString: Untagged
@@ -2094,7 +2095,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5024910213173991975}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b88f8be62454edf41a94b0e7aa131abf, type: 3}
   m_Name: 
@@ -2138,6 +2139,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.4, y: 12.3}
   m_EdgeRadius: 0
+--- !u!114 &7690404237571185348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024910213173991975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &5024910213181334275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,8 +2700,8 @@ GameObject:
   - component: {fileID: 5024910213434738282}
   - component: {fileID: 5024910213434738276}
   - component: {fileID: 5024910213434738283}
-  - component: {fileID: 5024910213434738278}
   - component: {fileID: 5024910213434738277}
+  - component: {fileID: 5388043915288982112}
   m_Layer: 0
   m_Name: BackGround_1
   m_TagString: Untagged
@@ -2762,19 +2776,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.4, y: 12.3}
   m_EdgeRadius: 0
---- !u!114 &5024910213434738278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5024910213434738281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88f8be62454edf41a94b0e7aa131abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
 --- !u!114 &5024910213434738277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2787,6 +2788,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd588e169a8362498760bfdb8e37d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5388043915288982112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024910213434738281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &5024910213458126665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,7 +3103,7 @@ GameObject:
   - component: {fileID: 5024910213577049591}
   m_Layer: 0
   m_Name: DeadZone
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3242,8 +3256,8 @@ GameObject:
   - component: {fileID: 5024910213600098341}
   - component: {fileID: 5024910213600098337}
   - component: {fileID: 5024910213600098336}
-  - component: {fileID: 5024910213600098343}
   - component: {fileID: 5024910213600098342}
+  - component: {fileID: 3631221038612590328}
   m_Layer: 0
   m_Name: BackGround_1 (1)
   m_TagString: Untagged
@@ -3318,19 +3332,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5024910213600098343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5024910213600098340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88f8be62454edf41a94b0e7aa131abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
 --- !u!114 &5024910213600098342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3343,6 +3344,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd588e169a8362498760bfdb8e37d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3631221038612590328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024910213600098340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &5024910213667527939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,6 +3454,7 @@ GameObject:
   - component: {fileID: 5024910213719646071}
   - component: {fileID: 5024910213719646070}
   - component: {fileID: 5024910213719646069}
+  - component: {fileID: 3938597152621095490}
   m_Layer: 0
   m_Name: Background_1
   m_TagString: Untagged
@@ -3495,7 +3510,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5024910213719646075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b88f8be62454edf41a94b0e7aa131abf, type: 3}
   m_Name: 
@@ -3539,6 +3554,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.4, y: 12.3}
   m_EdgeRadius: 0
+--- !u!114 &3938597152621095490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024910213719646075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &5024910213721329452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,8 +3662,8 @@ GameObject:
   - component: {fileID: 5024910213725228853}
   - component: {fileID: 5024910213725228849}
   - component: {fileID: 5024910213725228848}
-  - component: {fileID: 5024910213725228855}
   - component: {fileID: 5024910213725228854}
+  - component: {fileID: 9221940780404590058}
   m_Layer: 0
   m_Name: BackGround_1
   m_TagString: Untagged
@@ -3710,19 +3738,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5024910213725228855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5024910213725228852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88f8be62454edf41a94b0e7aa131abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
 --- !u!114 &5024910213725228854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3735,6 +3750,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd588e169a8362498760bfdb8e37d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9221940780404590058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024910213725228852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &5024910213756199587
 GameObject:
   m_ObjectHideFlags: 0
@@ -3914,8 +3942,8 @@ GameObject:
   - component: {fileID: 5024910213792950021}
   - component: {fileID: 5024910213792950017}
   - component: {fileID: 5024910213792950016}
-  - component: {fileID: 5024910213792950023}
   - component: {fileID: 5024910213792950022}
+  - component: {fileID: 4389800370820931090}
   m_Layer: 0
   m_Name: BackGround_1
   m_TagString: Untagged
@@ -3990,19 +4018,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5024910213792950023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5024910213792950020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88f8be62454edf41a94b0e7aa131abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
 --- !u!114 &5024910213792950022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4015,6 +4030,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd588e169a8362498760bfdb8e37d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4389800370820931090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024910213792950020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &5024910213940095649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4028,7 +4056,7 @@ GameObject:
   - component: {fileID: 5024910213940095677}
   m_Layer: 0
   m_Name: DeadZone (1)
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4130,8 +4158,8 @@ GameObject:
   - component: {fileID: 5024910214041217785}
   - component: {fileID: 5024910214041217787}
   - component: {fileID: 5024910214041217786}
-  - component: {fileID: 5024910214041217781}
   - component: {fileID: 5024910214041217780}
+  - component: {fileID: 4823397407627430571}
   m_Layer: 0
   m_Name: BackGround_1 (1)
   m_TagString: Untagged
@@ -4206,19 +4234,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.4, y: 12.3}
   m_EdgeRadius: 0
---- !u!114 &5024910214041217781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5024910214041217784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88f8be62454edf41a94b0e7aa131abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
 --- !u!114 &5024910214041217780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4231,6 +4246,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd588e169a8362498760bfdb8e37d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4823397407627430571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5024910214041217784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &5024910214204189241
 GameObject:
   m_ObjectHideFlags: 0

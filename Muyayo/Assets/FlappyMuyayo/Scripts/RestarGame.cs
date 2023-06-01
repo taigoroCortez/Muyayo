@@ -5,9 +5,9 @@ using System;
 
 public class RestarGame : MonoBehaviour
 {
-    void Start()
+    private void Awake()
     {
-        
+        FindObjectOfType<PanelMenuButton>().restarEvent += Restar;
     }
 
     // Update is called once per frame

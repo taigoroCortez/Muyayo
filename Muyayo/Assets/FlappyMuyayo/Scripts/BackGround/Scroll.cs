@@ -6,7 +6,7 @@ public class Scroll : MonoBehaviour
 {
     [SerializeField] private float speed = 2.5f;
     private Rigidbody2D rb;
-    private float stop = 0f;
+    //private float stop = 0f;
     private void Awake()
     {
         

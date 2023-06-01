@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -7,6 +7,7 @@ public class DeadPlayer : MonoBehaviour
 {
     public event Action DeadGroundPlayer;
     public event Action DiePlayer;
+    public event Action collisionCoin;
 
     PlayerController playerController;
     CameraShake cameraShake;
@@ -29,8 +30,17 @@ public class DeadPlayer : MonoBehaviour
         {
             DeadSky();
         }
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            CollisionCoins();
+            collision.gameObject.SetActive(false);
+        }
     }
     
+    void CollisionCoins()
+    {
+        collisionCoin?.Invoke();
+    }
     public void DeadSky()
     {
         Dead();

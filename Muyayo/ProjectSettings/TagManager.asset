@@ -10,6 +10,8 @@ TagManager:
   - ButtonPlay
   - Paneles
   - Enemies
+  - SelectPlayer
+  - Coin
   layers:
   - Default
   - TransparentFX

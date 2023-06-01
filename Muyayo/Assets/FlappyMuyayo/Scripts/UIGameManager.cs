@@ -30,6 +30,12 @@ public class UIGameManager : MonoBehaviour
     {
         PanelMenu();
         FindObjectOfType<PanelMenuButton>().playEvent += PanelInGame;
+        FindObjectOfType<DeadPlayer>().DiePlayer += PanelGameOver;
+        selectPlayer = GameObject.FindGameObjectWithTag("SelectPlayer");
+        if (!selectPlayer)
+        {
+            Debug.Log("Missing");
+        }
     }
 
     private void Start()
