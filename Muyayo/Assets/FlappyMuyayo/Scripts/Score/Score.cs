@@ -26,7 +26,7 @@ public class Score : MonoBehaviour
 
     void AddScore()
     {
-        score += 1;
+        score += 10;
         textScore.text = score.ToString("0");
     }
 }

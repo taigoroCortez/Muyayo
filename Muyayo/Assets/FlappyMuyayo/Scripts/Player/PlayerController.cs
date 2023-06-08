@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioEvent tapPlayer;
+    public AudioSource audio;
     Vector3 rotationSkin;
     [SerializeField] private float speed = 4f;
     bool move = false;
@@ -13,6 +16,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        
         FindObjectOfType<PanelMenuButton>().playEvent += InitMovePlayer;
         FindObjectOfType<PanelMenuButton>().playEvent += StarPosition;
         
@@ -30,7 +34,10 @@ public class PlayerController : MonoBehaviour
         {
             i++;
             move = !move;
+            tapPlayer.Play(audio);
         }
+        
+        
         if (i >= 1)
         {
             initMove2 = true;
@@ -58,7 +65,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
+   
     void InitMovePlayer()
     {
         initMove = true;

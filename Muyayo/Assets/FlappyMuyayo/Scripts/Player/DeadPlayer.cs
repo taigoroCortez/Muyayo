@@ -5,6 +5,8 @@ using System;
 
 public class DeadPlayer : MonoBehaviour
 {
+    public AudioEvent Coin;
+    public AudioSource audio;
     public event Action DeadGroundPlayer;
     public event Action DiePlayer;
     public event Action collisionCoin;
@@ -13,6 +15,7 @@ public class DeadPlayer : MonoBehaviour
     CameraShake cameraShake;
     private void Awake()
     {
+        
         cameraShake = FindObjectOfType<CameraShake>();
         playerController = GetComponent<PlayerController>();
 
@@ -34,9 +37,13 @@ public class DeadPlayer : MonoBehaviour
         {
             CollisionCoins();
             collision.gameObject.SetActive(false);
+            Coin.Play(audio);
         }
+        
     }
-    
+
+ 
+
     void CollisionCoins()
     {
         collisionCoin?.Invoke();
