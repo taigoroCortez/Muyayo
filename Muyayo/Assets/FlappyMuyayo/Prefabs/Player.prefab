@@ -234,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 6951249094618174020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.55070996, y: 0.55070996, z: 0.55070996}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6951249093540902362}
@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tapPlayer: {fileID: 11400000, guid: 198121ac50d9b8e478b7a3e5acc8c9cd, type: 2}
+  audio: {fileID: 810836509}
   speed: 2
   initMove: 0
 --- !u!50 &6951249094618174030
@@ -308,6 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45388d40b25ebf4fbd117a172abcb66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coin: {fileID: 11400000, guid: 769604e62c2580745a44293380bbd8c1, type: 2}
+  audio: {fileID: 2982316510736725186}
 --- !u!58 &1683740030
 CircleCollider2D:
   m_ObjectHideFlags: 0

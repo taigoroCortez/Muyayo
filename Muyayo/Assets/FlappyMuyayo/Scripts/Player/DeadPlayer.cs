@@ -9,18 +9,19 @@ public class DeadPlayer : MonoBehaviour
     public AudioSource audio;
     public event Action DeadGroundPlayer;
     public event Action DiePlayer;
-    public event Action collisionCoin;
+   
+    Rigidbody2D rb;
 
     PlayerController playerController;
     CameraShake cameraShake;
     private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
         cameraShake = FindObjectOfType<CameraShake>();
         playerController = GetComponent<PlayerController>();
-
-        FindObjectOfType<DeadZoneSky>().CollisionPlayer += DeadSky;
-        FindObjectOfType<DeadZone>().CollisionPlayer += DeadGround;
+       
+        FindObjectOfType<DeadZoneSky>().DieZoneSky += DeadSky;
+        FindObjectOfType<DeadZoneGround>().DieZoneGround += DeadGround;
     }
     void Start()
     {
@@ -31,11 +32,12 @@ public class DeadPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemies"))
         {
-            DeadSky();
+            DeadByEnemy();
         }
         if (collision.gameObject.CompareTag("Coin"))
         {
-            CollisionCoins();
+            collision.GetComponent<IScoreCoin>()?.Score();
+         
             collision.gameObject.SetActive(false);
             Coin.Play(audio);
         }
@@ -44,12 +46,13 @@ public class DeadPlayer : MonoBehaviour
 
  
 
-    void CollisionCoins()
-    {
-        collisionCoin?.Invoke();
-    }
+   
     public void DeadSky()
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        var groundZone = FindObjectOfType<DeadZoneGround>();
+        groundZone.gameObject.SetActive(false);
         Dead();
     }
 
@@ -59,16 +62,15 @@ public class DeadPlayer : MonoBehaviour
         DeadGroundPlayer?.Invoke();
     }
 
+    void DeadByEnemy()
+    {
+        Dead();
+    }
+
     void Dead()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Dynamic;
         playerController.enabled = false;
         DiePlayer?.Invoke();
     }
 
-    private void OnDisable()
-    {
-        
-    }
 }

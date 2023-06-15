@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class BirdEnemy_Violet : BaseEnemies
 {
-    // Start is called before the first frame update
+    protected override void Awake()
+    {
+        base.Awake();
+    }
     void Start()
     {
         

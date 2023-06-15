@@ -13,10 +13,13 @@ public class PlayerController : MonoBehaviour
     public bool initMove;
     bool initMove2;
     int i = 0;
+    float alto;
+    float ancho;
     // Start is called before the first frame update
     private void Awake()
     {
-        
+        alto = Camera.main.orthographicSize;
+        ancho = alto * Camera.main.aspect;
         FindObjectOfType<PanelMenuButton>().playEvent += InitMovePlayer;
         FindObjectOfType<PanelMenuButton>().playEvent += StarPosition;
         
@@ -73,7 +76,8 @@ public class PlayerController : MonoBehaviour
     void StarPosition()
     {
         transform.rotation = Quaternion.Euler(Vector3.zero);
-        transform.position = new Vector3(-2f, 0f, 0f);
+ 
+        transform.position = new Vector3(-ancho + 0.8f, 0f, 0f);
         
     }
     

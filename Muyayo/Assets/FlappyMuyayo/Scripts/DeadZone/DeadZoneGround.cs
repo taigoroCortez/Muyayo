@@ -2,9 +2,9 @@
 using UnityEngine;
 using System;
 
-public class DeadZone : MonoBehaviour
+public class DeadZoneGround : MonoBehaviour
 {
-    public event Action CollisionPlayer;
+    public event Action DieZoneGround;
     void Start()
     {
         
@@ -16,7 +16,7 @@ public class DeadZone : MonoBehaviour
         {
             BoxCollider2D box = GetComponent<BoxCollider2D>();
             box.isTrigger = false;
-            CollisionPlayer?.Invoke();
+            DieZoneGround?.Invoke();
         }
     }
 }

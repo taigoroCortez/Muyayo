@@ -6,23 +6,34 @@ public class BaseMovement : MonoBehaviour
 {
     [SerializeField] private float superSpeedEnemies = 4f;
     [SerializeField] protected float speed = 3f;
+    [SerializeField] protected float currentSpeed;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         FindObjectOfType<DeadPlayer>().DiePlayer += DisableMovement;
         FindObjectOfType<SoundBackground>().soundSpeed += SuperSpeed;
+        FindObjectOfType<SoundBackground>().DisableSoundSpeed += NormalSpeed;
+        currentSpeed = speed;
+    }
+    private void Start()
+    {
+        
     }
     protected virtual void BaseMove()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
     }
 
+    void NormalSpeed()
+    {
+        currentSpeed = speed;
+    }
     void SuperSpeed()
     {
-        speed = superSpeedEnemies;
+        currentSpeed = superSpeedEnemies;
     }
     void DisableMovement()
     {
-        speed = 0f;
+        currentSpeed = 0f;
     }
 }

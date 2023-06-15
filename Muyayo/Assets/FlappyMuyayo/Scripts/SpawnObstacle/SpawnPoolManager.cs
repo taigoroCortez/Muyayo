@@ -17,8 +17,11 @@ public class SpawnPoolManager : MonoBehaviour
     private float timeElapsed;
     private int obstacleCount;
 
+    bool GO;
+
     private void Awake()
     {
+        FindObjectOfType<DeadPlayer>().DiePlayer += SpawnInit;
         //FindObjectOfType<CollisionToPlayer>().playerCollision += ActiveObject;
     }
     void Start()
@@ -35,12 +38,15 @@ public class SpawnPoolManager : MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;
-       if(timeElapsed > spawnTime)
+       if(timeElapsed > spawnTime && !GO)
         {
             SpawnObstacles();
         }
     }
-
+    void SpawnInit()
+    {
+        GO = true;
+    }
     void ActiveObject()
     {
         gameObject.SetActive(false);

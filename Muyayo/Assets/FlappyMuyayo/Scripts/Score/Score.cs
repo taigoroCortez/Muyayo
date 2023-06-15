@@ -6,16 +6,17 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     public TextMeshProUGUI textScore;
-    int score;
+    public int playerScore;
+
 
     private void Awake()
     {
-        FindObjectOfType<DeadPlayer>().collisionCoin += AddScore;
+
     }
     void Start()
     {
         textScore = GetComponent<TextMeshProUGUI>();
-        score = 0;
+        playerScore = 0;
     }
 
     // Update is called once per frame
@@ -24,9 +25,9 @@ public class Score : MonoBehaviour
         
     }
 
-    void AddScore()
+    public void AddScore(int InputPoint)
     {
-        score += 10;
-        textScore.text = score.ToString("0");
+        playerScore += InputPoint;
+        textScore.text = playerScore.ToString("0");
     }
 }

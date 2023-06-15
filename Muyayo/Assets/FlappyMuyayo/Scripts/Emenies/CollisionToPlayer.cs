@@ -5,10 +5,12 @@ using System;
 
 public class CollisionToPlayer : MonoBehaviour
 {
-    void Start()
+    public event Action rbDie;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            rbDie?.Invoke();
+        }
     }
-
-  
 }

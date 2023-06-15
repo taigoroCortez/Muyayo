@@ -10,6 +10,10 @@ public class BaseEnemies : BaseMovement
     [SerializeField] float verticalSpeed=2f;
 
     Vector3 startPosition;
+    protected override void Awake()
+    {
+        base.Awake();
+    }
     void Start()
     {
         startPosition = transform.localPosition;
@@ -23,6 +27,6 @@ public class BaseEnemies : BaseMovement
     
     protected virtual void MoveSinEnemies()
     {
-        transform.position += new Vector3(-1, amplitude * Mathf.Sin(Time.time * verticalSpeed), 0f) * Time.deltaTime * speed;
+        transform.position += new Vector3(-1, amplitude * Mathf.Sin(Time.time * verticalSpeed), 0f) * Time.deltaTime * currentSpeed;
     }
 }

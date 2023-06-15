@@ -100,7 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7066926d159b4924e8090670d80d52d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
+  pointCoin: 100
 --- !u!58 &3659658803790391972
 CircleCollider2D:
   m_ObjectHideFlags: 0

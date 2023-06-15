@@ -363,7 +363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
 --- !u!1 &5024910212330588700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,7 +2153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
 --- !u!1 &5024910213181334275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2800,7 +2804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
 --- !u!1 &5024910213458126665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,8 +3108,8 @@ GameObject:
   - component: {fileID: 5024910213577049589}
   - component: {fileID: 5024910213577049591}
   m_Layer: 0
-  m_Name: DeadZone
-  m_TagString: Enemies
+  m_Name: DeadZoneGround
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3356,7 +3362,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
 --- !u!1 &5024910213667527939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,7 +3574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
 --- !u!1 &5024910213721329452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,7 +3772,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
 --- !u!1 &5024910213756199587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4042,7 +4054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
 --- !u!1 &5024910213940095649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,8 +4069,8 @@ GameObject:
   - component: {fileID: 5024910213940095651}
   - component: {fileID: 5024910213940095677}
   m_Layer: 0
-  m_Name: DeadZone (1)
-  m_TagString: Enemies
+  m_Name: DeadZoneSky
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4258,7 +4272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a06431bf61a8e4780d3c9909b58f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSpeedEnemies: 4
   speed: 3
+  currentSpeed: 0
 --- !u!1 &5024910214204189241
 GameObject:
   m_ObjectHideFlags: 0

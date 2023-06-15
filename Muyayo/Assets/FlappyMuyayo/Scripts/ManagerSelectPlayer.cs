@@ -24,6 +24,7 @@ public class ManagerSelectPlayer : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        player = 1;
     }
     
 

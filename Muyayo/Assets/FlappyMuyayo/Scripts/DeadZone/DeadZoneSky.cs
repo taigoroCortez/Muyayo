@@ -4,7 +4,7 @@ using System;
 
 public class DeadZoneSky : MonoBehaviour
 {
-    public event Action CollisionPlayer;
+    public event Action DieZoneSky;
 
     private void Awake()
     {
@@ -14,7 +14,9 @@ public class DeadZoneSky : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            CollisionPlayer?.Invoke();
+            DieZoneSky?.Invoke();
+            var f = FindObjectOfType<DeadZoneSky>();
+            f.gameObject.SetActive(false);
         }
     }
     
