@@ -7,6 +7,7 @@ public class BirdEnemy_Red : BaseEnemies
     // Start is called before the first frame update
     protected override void Awake()
     {
+        FindObjectOfType<DeadPlayer>().DiePlayer += Desactivar;
         base.Awake();
     }
     void Start()
@@ -18,5 +19,15 @@ public class BirdEnemy_Red : BaseEnemies
     void Update()
     {
         MoveSinEnemies();
+    }
+
+    void Desactivar()
+    {
+        StartCoroutine(TimerDisable());
+    }
+    IEnumerator TimerDisable()
+    {
+        yield return new WaitForSeconds(2f);
+        gameObject.SetActive(false);
     }
 }

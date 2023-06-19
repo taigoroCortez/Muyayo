@@ -18,7 +18,7 @@ public class SoundBackground : MonoBehaviour
     {
         FindObjectOfType<PanelMenuButton>().playEvent += ActiveSound;
         FindObjectOfType<DeadPlayer>().DiePlayer += PlayerDie;
-        FindObjectOfType<DeadPlayer>().DiePlayer += DisableSound;
+        FindObjectOfType<DeadPlayer>().DiePlayer += SoundGameOver;
     }
     void Start()
     {
@@ -52,7 +52,7 @@ public class SoundBackground : MonoBehaviour
         audioSource.Play();
         //audioSource.gameObject.SetActive(true);
     }
-    void DisableSound()
+    void SoundGameOver()
     {
         audioSource.clip = clipsGameOver;
         audioSource.loop = false;

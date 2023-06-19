@@ -6,6 +6,7 @@ public class BirdEnemy_Violet : BaseEnemies
 {
     protected override void Awake()
     {
+        FindObjectOfType<DeadPlayer>().DiePlayer += Desactivar;
         base.Awake();
     }
     void Start()
@@ -17,5 +18,16 @@ public class BirdEnemy_Violet : BaseEnemies
     void Update()
     {
         BaseMove();
+    }
+
+    void Desactivar()
+    {
+        StartCoroutine(TimerDisable());
+    }
+
+    IEnumerator TimerDisable()
+    {
+        yield return new WaitForSeconds(2f);
+        gameObject.SetActive(false);
     }
 }
