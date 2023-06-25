@@ -26,7 +26,12 @@ public class ManagerSelectPlayer : MonoBehaviour
         }
         player = 1;
     }
-    
+
+    private void Start()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = -1;
+    }
 
     public void ChangePlayerSkin()
     {

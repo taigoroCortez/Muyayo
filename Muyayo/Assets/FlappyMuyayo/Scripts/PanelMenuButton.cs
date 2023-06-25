@@ -11,7 +11,7 @@ public class PanelMenuButton : MonoBehaviour
 
     public Button buttonPlay;
     public Button buttonNext;
-    public Button buttonrestar;
+    //public Button buttonrestar;
 
     public AudioEvent tapbutton;
     public AudioSource audio;
@@ -25,7 +25,7 @@ public class PanelMenuButton : MonoBehaviour
     {
         buttonPlay.onClick.AddListener(OnPlayButtonPress);
         buttonNext.onClick.AddListener(OnNextButtonPress);
-        buttonrestar.onClick.AddListener(OnRestarButtonPress);
+        //buttonrestar.onClick.AddListener(OnRestarButtonPress);
     }
 
     private void OnRestarButtonPress()

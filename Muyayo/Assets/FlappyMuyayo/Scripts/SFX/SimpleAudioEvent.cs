@@ -15,6 +15,7 @@ public class SimpleAudioEvent : AudioEvent
         source.volume = volume;
         source.clip = clip;
         source.Play();
+       
        // source.Stop();
         //source.PlayOneShot(clip);
     }

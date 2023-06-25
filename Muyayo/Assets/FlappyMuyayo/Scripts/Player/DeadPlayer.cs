@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class DeadPlayer : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class DeadPlayer : MonoBehaviour
         cameraShake = FindObjectOfType<CameraShake>();
         playerController = GetComponent<PlayerController>();
        
+        
         FindObjectOfType<DeadZoneSky>().DieZoneSky += DeadSky;
         FindObjectOfType<DeadZoneGround>().DieZoneGround += DeadGround;
     }
@@ -44,9 +46,6 @@ public class DeadPlayer : MonoBehaviour
         
     }
 
- 
-
-   
     public void DeadSky()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -71,6 +70,12 @@ public class DeadPlayer : MonoBehaviour
     {
         playerController.enabled = false;
         DiePlayer?.Invoke();
+        StartCoroutine(TimerestarGame());
     }
 
+    IEnumerator TimerestarGame()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

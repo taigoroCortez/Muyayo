@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Score : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Score : MonoBehaviour
     public AudioEvent siuuu;
     public AudioSource audio;
 
+    public event Action tornado;
 
     private void Awake()
     {
@@ -34,16 +36,23 @@ public class Score : MonoBehaviour
     {
         playerScore += InputPoint;
         textScore.text = playerScore.ToString("0");
-        if (playerScore == 1000)
+        if (playerScore >= 1000)
         {
-            Debug.Log("klhsaifsa");
             siuuu.Play(audio);
+            StartCoroutine(DisableSiu());
         }
+
+        
         if (playerScore > PlayerPrefs.GetInt("TextHightScore", 0))
         {
             PlayerPrefs.SetInt("TextHightScore", playerScore);
             textHightScore.text = playerScore.ToString();
         }
-        
+    }
+
+    IEnumerator DisableSiu()
+    {
+        yield return new WaitForSeconds(2f);
+        audio.enabled = false;
     }
 }

@@ -1,4 +1,4 @@
-
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
@@ -22,5 +22,9 @@ public class RestarGame : MonoBehaviour
     public void Restar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
+
+
+    
 }

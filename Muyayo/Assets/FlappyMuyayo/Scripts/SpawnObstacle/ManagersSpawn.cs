@@ -7,9 +7,11 @@ public class ManagersSpawn : MonoBehaviour
     public GameObject[] spawn;
 
     private float initTime = 0f;
+    private float initTimeBirdPlomo = 0f;
     [SerializeField] private float nextSpawnBirdRed = 30f;
     [SerializeField] private float nextSpawnCoinSilver = 30f;
     [SerializeField] private float nextSpawnCoinBronce = 30f;
+    [SerializeField] private float nextSpawnBirdPlomo = 60f;
 
     private bool activeTimer;
     private void Awake()
@@ -23,13 +25,19 @@ public class ManagersSpawn : MonoBehaviour
         spawn[2].SetActive(false);  //coin_1
         spawn[3].SetActive(false);  //silver
         spawn[4].SetActive(false);  //bronce
+        spawn[5].SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(activeTimer)
+        if (activeTimer)
+        {
             initTime += Time.deltaTime;
+            initTimeBirdPlomo += Time.deltaTime;
+        }
+            
 
    
         if(initTime > nextSpawnBirdRed)
@@ -44,6 +52,12 @@ public class ManagersSpawn : MonoBehaviour
         {
             spawn[4].SetActive(true);
         }
+        if(initTimeBirdPlomo > nextSpawnBirdPlomo)
+        {
+            spawn[5].SetActive(true);
+            StartCoroutine(DisactiveSpawnBridPlomo());
+            initTimeBirdPlomo = 0f;
+        }
     }
 
     void SetInitial()
@@ -52,5 +66,12 @@ public class ManagersSpawn : MonoBehaviour
         spawn[0].SetActive(true);
         spawn[1].SetActive(false);
         spawn[2].SetActive(true);
+        spawn[5].SetActive(false);
+    }
+
+    IEnumerator DisactiveSpawnBridPlomo()
+    {
+        yield return new WaitForSeconds(6);
+        spawn[5].SetActive(false);
     }
 }

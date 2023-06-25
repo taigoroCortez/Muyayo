@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(Vector3.zero);
  
-        transform.position = new Vector3(-ancho + 0.8f, 0f, 0f);
+        transform.position = new Vector3(-ancho + 0.7f, 0f, 0f);
         
     }
     

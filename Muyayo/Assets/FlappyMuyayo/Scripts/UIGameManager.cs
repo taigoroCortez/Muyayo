@@ -19,7 +19,7 @@ public class UIGameManager : MonoBehaviour
     public TMP_Text titleGameOver;
     public TMP_Text titleHightScore;
     public TMP_Text hightScore;
-    public Button buttonRestar;
+    public Button buttonExit;
     
     #endregion
 
@@ -53,7 +53,8 @@ public class UIGameManager : MonoBehaviour
         selectPlayer.gameObject.SetActive(true);
 
         titleGameOver.gameObject.SetActive(false);
-        buttonRestar.gameObject.SetActive(false);
+        buttonExit.gameObject.SetActive(true);
+        //buttonRestar.gameObject.SetActive(false);
         
 
         score.gameObject.SetActive(false);
@@ -64,7 +65,7 @@ public class UIGameManager : MonoBehaviour
     void PanelGameOver()
     {
         titleGameOver.gameObject.SetActive(true);
-        buttonRestar.gameObject.SetActive(true);
+        //buttonRestar.gameObject.SetActive(true);
        
 
         score.gameObject.SetActive(false);
@@ -76,6 +77,7 @@ public class UIGameManager : MonoBehaviour
         buttonNext.gameObject.SetActive(false);
         selectPlayer.gameObject.SetActive(false);
 
+        buttonExit.gameObject.SetActive(false);
     }
 
     void PanelInGame()
@@ -88,10 +90,12 @@ public class UIGameManager : MonoBehaviour
         selectPlayer.gameObject.SetActive(false);
 
         titleGameOver.gameObject.SetActive(false);
-        buttonRestar.gameObject.SetActive(false);
+        //buttonRestar.gameObject.SetActive(false);
        
         hightScore.gameObject.SetActive(false);
         titleHightScore.gameObject.SetActive(false);
+
+        buttonExit.gameObject.SetActive(false);
     }
 
     
