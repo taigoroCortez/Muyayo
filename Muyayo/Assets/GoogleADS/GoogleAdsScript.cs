@@ -7,20 +7,22 @@ public class GoogleAdsScript : MonoBehaviour
 {
     private void Awake()
     {
-        FindObjectOfType<DeadPlayer>().DiePlayer += LoadAd;
+        //FindObjectOfType<DeadPlayer>().DiePlayer += LoadAd;
     }
     public void Start()
     {
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
+            
             // This callback is called once the MobileAds SDK is initialized.
         });
+       
     }
 
     // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-3940256099942544/6300978111";
+    private string _adUnitId = "ca-app-pub-8255863298013904/2686590398";
 #elif UNITY_IPHONE
   private string _adUnitId = "ca-app-pub-3940256099942544/2934735716";
 #else

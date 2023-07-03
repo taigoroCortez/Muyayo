@@ -20,6 +20,8 @@ public class UIGameManager : MonoBehaviour
     public TMP_Text titleHightScore;
     public TMP_Text hightScore;
     public Button buttonExit;
+
+    public TMP_Text textScore;
     
     #endregion
 
@@ -54,10 +56,12 @@ public class UIGameManager : MonoBehaviour
 
         titleGameOver.gameObject.SetActive(false);
         buttonExit.gameObject.SetActive(true);
+
+        textScore.gameObject.SetActive(false);
         //buttonRestar.gameObject.SetActive(false);
         
 
-        score.gameObject.SetActive(false);
+        score.gameObject.SetActive(true);
         titleHightScore.gameObject.SetActive(false);
         hightScore.gameObject.SetActive(false);
     }
@@ -68,7 +72,7 @@ public class UIGameManager : MonoBehaviour
         //buttonRestar.gameObject.SetActive(true);
        
 
-        score.gameObject.SetActive(false);
+        score.gameObject.SetActive(true);
         titleHightScore.gameObject.SetActive(true);
         hightScore.gameObject.SetActive(true);
 
@@ -78,6 +82,8 @@ public class UIGameManager : MonoBehaviour
         selectPlayer.gameObject.SetActive(false);
 
         buttonExit.gameObject.SetActive(false);
+
+        textScore.gameObject.SetActive(true);
     }
 
     void PanelInGame()

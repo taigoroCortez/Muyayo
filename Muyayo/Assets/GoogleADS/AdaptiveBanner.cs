@@ -7,7 +7,7 @@ public class AdaptiveBanner : MonoBehaviour
 {
     private BannerView _bannerView;
     // Create a 320x50 banner ad at coordinate (0,50) on screen.
-
+    
 
     // Use this for initialization
     void Start()
@@ -23,7 +23,7 @@ public class AdaptiveBanner : MonoBehaviour
                 #if UNITY_IPHONE
                 "96e23e80653bb28980d3f40beb58915c"
                 #elif UNITY_ANDROID
-                "75EF8D155528C04DACBBA6F36F433035"
+                "ca-app-pub-8255863298013904~2981599283"
                 #endif
             }
         };
@@ -47,7 +47,7 @@ public class AdaptiveBanner : MonoBehaviour
 #if UNITY_EDITOR
         string adUnitId = "unused";
 #elif UNITY_ANDROID
-            string adUnitId = "ca-app-pub-3212738706492790/6113697308";
+            string adUnitId = "ca-app-pub-8255863298013904/2686590398";
 #elif UNITY_IPHONE
             string adUnitId = "ca-app-pub-3212738706492790/5381898163";
 #else
