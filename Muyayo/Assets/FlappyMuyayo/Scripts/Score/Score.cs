@@ -15,15 +15,25 @@ public class Score : MonoBehaviour
 
     public event Action tornado;
 
+    RectTransform rectTransform;
+
     private void Awake()
     {
+        rectTransform = GetComponent<RectTransform>();
+        FindObjectOfType<PanelMenuButton>().playEvent += PositionPlay;
         audio = GetComponent<AudioSource>();
+        
+        FindObjectOfType<DeadPlayer>().DiePlayer += PositionGameOver;
     }
     void Start()
     {
+        
         textScore = GetComponent<TextMeshProUGUI>();
         playerScore = 0;
         textHightScore.text = PlayerPrefs.GetInt("TextHightScore", 0).ToString();
+
+        
+        
     }
 
     // Update is called once per frame
@@ -50,6 +60,14 @@ public class Score : MonoBehaviour
         }
     }
 
+    void PositionPlay()
+    {
+        rectTransform.anchoredPosition = new Vector2(-10, -33);
+    }
+    void PositionGameOver()
+    {
+        rectTransform.anchoredPosition = new Vector2(-350,-1008);
+    }
     IEnumerator DisableSiu()
     {
         yield return new WaitForSeconds(2f);
