@@ -5899,7 +5899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "FONT\n Juan Pablo del Peral (juan@huertatipografica.com.ar)"
+  m_text: "FONT\n Juan Pablo del Peral (juan@huertatipografica.com.ar)\n\nSPRITE\nFreepik"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38147a7ad99cde64a8735e647d853a85, type: 2}
   m_sharedMaterial: {fileID: 8526203703207723771, guid: 38147a7ad99cde64a8735e647d853a85, type: 2}
