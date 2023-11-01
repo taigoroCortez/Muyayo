@@ -46,7 +46,7 @@ public class Score : MonoBehaviour
     {
         playerScore += InputPoint;
         textScore.text = playerScore.ToString("0");
-        if (playerScore >= 1000)
+        if (playerScore >= 500)
         {
             siuuu.Play(audio);
             StartCoroutine(DisableSiu());

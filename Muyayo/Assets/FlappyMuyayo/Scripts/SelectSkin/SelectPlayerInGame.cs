@@ -30,18 +30,40 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[0].SetActive(true);
             playerInGame[1].SetActive(false);
             playerInGame[2].SetActive(false);
+            playerInGame[3].SetActive(false);
+            playerInGame[4].SetActive(false);
         }
         else if(managerSelectPlayer.player == 2)
         {
             playerInGame[0].SetActive(false);
             playerInGame[1].SetActive(true);
             playerInGame[2].SetActive(false);
+            playerInGame[3].SetActive(false);
+            playerInGame[4].SetActive(false);
         }
         else if(managerSelectPlayer.player == 3)
         {
             playerInGame[0].SetActive(false);
             playerInGame[1].SetActive(false);
             playerInGame[2].SetActive(true);
+            playerInGame[3].SetActive(false);
+            playerInGame[4].SetActive(false);
+        }
+        else if (managerSelectPlayer.player == 4)
+        {
+            playerInGame[0].SetActive(false);
+            playerInGame[1].SetActive(false);
+            playerInGame[2].SetActive(false);
+            playerInGame[3].SetActive(true);
+            playerInGame[4].SetActive(false);
+        }
+        else if (managerSelectPlayer.player == 5)
+        {
+            playerInGame[0].SetActive(false);
+            playerInGame[1].SetActive(false);
+            playerInGame[2].SetActive(false);
+            playerInGame[3].SetActive(false);
+            playerInGame[4].SetActive(true);
         }
     }
 

@@ -8,7 +8,7 @@ public class ManagerSelectPlayer : MonoBehaviour
     public static ManagerSelectPlayer Instance => instance;
     
 
-    [SerializeField] private int NumberPlayers = 3;
+    
     public int player;
 
     private void Awake()
@@ -35,11 +35,11 @@ public class ManagerSelectPlayer : MonoBehaviour
 
     public void ChangePlayerSkin()
     {
-        if(player < NumberPlayers)
+        if(player < 5)
         {
             player++;
         }
-        else if(player == NumberPlayers)
+        else if(player == 5)
         {
             player = 1;
         }
