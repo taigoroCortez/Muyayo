@@ -17,6 +17,7 @@ public class SelectBackground : MonoBehaviour
             go.SetActive(false);
         }
         var indexRandom = Random.Range(0, backgrounds.Length);
+
         backgrounds[indexRandom].SetActive(true);
        
         

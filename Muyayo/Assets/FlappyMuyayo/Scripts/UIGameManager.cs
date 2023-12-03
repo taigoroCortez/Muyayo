@@ -12,6 +12,7 @@ public class UIGameManager : MonoBehaviour
     public Button buttonPlay;
     public Button buttonNext;
     public GameObject selectPlayer;
+    public Button buttonRanking;
     #endregion
 
     #region PanelGameOver
@@ -56,6 +57,7 @@ public class UIGameManager : MonoBehaviour
 
         titleGameOver.gameObject.SetActive(false);
         buttonExit.gameObject.SetActive(true);
+        buttonRanking.gameObject.SetActive(true);
 
         textScore.gameObject.SetActive(false);
         //buttonRestar.gameObject.SetActive(false);
@@ -82,6 +84,7 @@ public class UIGameManager : MonoBehaviour
         selectPlayer.gameObject.SetActive(false);
 
         buttonExit.gameObject.SetActive(false);
+        buttonRanking.gameObject.SetActive(false);
 
         textScore.gameObject.SetActive(true);
     }
@@ -102,6 +105,7 @@ public class UIGameManager : MonoBehaviour
         titleHightScore.gameObject.SetActive(false);
 
         buttonExit.gameObject.SetActive(false);
+        buttonRanking.gameObject.SetActive(false);
     }
 
     

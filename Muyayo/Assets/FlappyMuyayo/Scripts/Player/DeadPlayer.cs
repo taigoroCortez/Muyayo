@@ -10,6 +10,8 @@ public class DeadPlayer : MonoBehaviour
     public AudioSource audio;
     public event Action DeadGroundPlayer;
     public event Action DiePlayer;
+
+    PlayGameScore playGameScore;
    
     Rigidbody2D rb;
 
@@ -20,8 +22,8 @@ public class DeadPlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         cameraShake = FindObjectOfType<CameraShake>();
         playerController = GetComponent<PlayerController>();
-       
-        
+
+        playGameScore = FindObjectOfType<PlayGameScore>();
         FindObjectOfType<DeadZoneSky>().DieZoneSky += DeadSky;
         FindObjectOfType<DeadZoneGround>().DieZoneGround += DeadGround;
     }
@@ -68,6 +70,7 @@ public class DeadPlayer : MonoBehaviour
 
     void Dead()
     {
+        playGameScore.SendScore();
         playerController.enabled = false;
         DiePlayer?.Invoke();
         StartCoroutine(TimerestarGame());

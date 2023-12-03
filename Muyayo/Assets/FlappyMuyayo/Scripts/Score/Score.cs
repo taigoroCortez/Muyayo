@@ -8,8 +8,10 @@ public class Score : MonoBehaviour
 {
     public TextMeshProUGUI textScore;
     public TextMeshProUGUI textHightScore;
+
     public int playerScore;
     public int hightScore;
+
     public AudioEvent siuuu;
     public AudioSource audio;
 
@@ -46,13 +48,36 @@ public class Score : MonoBehaviour
     {
         playerScore += InputPoint;
         textScore.text = playerScore.ToString("0");
-        if (playerScore >= 500)
+        if (playerScore >= 1000)
         {
-            siuuu.Play(audio);
-            StartCoroutine(DisableSiu());
+            ActivateSiu();   
+        }
+        else if(playerScore >= 2000)
+        {
+            ActivateSiu();
+        }
+        else if (playerScore >= 3000)
+        {
+            ActivateSiu();
+        }
+        else if (playerScore >= 4000)
+        {
+            ActivateSiu();
+        }
+        else if (playerScore >= 5000)
+        {
+            ActivateSiu();
+        }
+        else if (playerScore >= 6000)
+        {
+            ActivateSiu();
+        }
+        else if (playerScore >= 7000)
+        {
+            ActivateSiu();
         }
 
-        
+
         if (playerScore > PlayerPrefs.GetInt("TextHightScore", 0))
         {
             PlayerPrefs.SetInt("TextHightScore", playerScore);
@@ -60,6 +85,11 @@ public class Score : MonoBehaviour
         }
     }
 
+    void ActivateSiu()
+    {
+        siuuu.Play(audio);
+        StartCoroutine(DisableSiu());
+    }
     void PositionPlay()
     {
         rectTransform.anchoredPosition = new Vector2(-10, -33);

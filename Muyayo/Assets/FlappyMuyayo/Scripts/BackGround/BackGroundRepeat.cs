@@ -9,7 +9,7 @@ public class BackGroundRepeat : MonoBehaviour
     void Start()
     {
         BoxCollider2D box = GetComponent<BoxCollider2D>();
-        spriteWidth = box.size.x;
+        spriteWidth = box.size.x / 2;
        
     }
 
