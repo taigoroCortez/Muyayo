@@ -11,6 +11,7 @@ public class DeadPlayer : MonoBehaviour
     public event Action DeadGroundPlayer;
     public event Action DiePlayer;
 
+    private int countDead = 0;
     PlayGameScore playGameScore;
    
     Rigidbody2D rb;
@@ -19,6 +20,7 @@ public class DeadPlayer : MonoBehaviour
     CameraShake cameraShake;
     private void Awake()
     {
+        countDead = PlayerPrefs.GetInt("DeadPlayer");
         rb = GetComponent<Rigidbody2D>();
         cameraShake = FindObjectOfType<CameraShake>();
         playerController = GetComponent<PlayerController>();
@@ -29,7 +31,7 @@ public class DeadPlayer : MonoBehaviour
     }
     void Start()
     {
-        
+        Debug.Log(" Muertes " + countDead);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -70,6 +72,24 @@ public class DeadPlayer : MonoBehaviour
 
     void Dead()
     {
+        countDead++;
+        
+
+        PlayerPrefs.SetInt("DeadPlayer", countDead);
+        PlayerPrefs.Save();
+
+        if(countDead >= 3)
+        {
+            MyInterstitial myInterstitial;
+            myInterstitial = FindObjectOfType<MyInterstitial>();
+            myInterstitial.ShowInterstitialAd();
+            countDead = 0;
+            PlayerPrefs.SetInt("DeadPlayer", countDead);
+            PlayerPrefs.Save();
+        }
+
+        
+        
         playGameScore.SendScore();
         playerController.enabled = false;
         DiePlayer?.Invoke();

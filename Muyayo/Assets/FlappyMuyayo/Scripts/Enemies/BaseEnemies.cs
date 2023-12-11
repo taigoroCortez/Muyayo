@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Mathematics;
+//using Unity.Mathematics;
 
 public class BaseEnemies : BaseMovement
 {
@@ -19,11 +19,6 @@ public class BaseEnemies : BaseMovement
         startPosition = transform.localPosition;
     }
 
-    
-    void Update()
-    {
-        
-    }
     
     protected virtual void MoveSinEnemies()
     {

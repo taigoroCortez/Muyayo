@@ -12,6 +12,7 @@ public class ManagersSpawn : MonoBehaviour
     [SerializeField] private float nextSpawnCoinSilver = 30f;
     [SerializeField] private float nextSpawnCoinBronce = 30f;
     [SerializeField] private float nextSpawnBirdPlomo = 60f;
+    [SerializeField] private float nextSpawnBirdBlack = 90f;
 
     private bool activeTimer;
     private void Awake()
@@ -26,7 +27,7 @@ public class ManagersSpawn : MonoBehaviour
         spawn[3].SetActive(false);  //silver
         spawn[4].SetActive(false);  //bronce
         spawn[5].SetActive(false);
-
+        spawn[6].SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,6 +58,10 @@ public class ManagersSpawn : MonoBehaviour
             spawn[5].SetActive(true);
             StartCoroutine(DisactiveSpawnBridPlomo());
             initTimeBirdPlomo = 0f;
+        }
+        if(initTime > nextSpawnBirdBlack)
+        {
+            spawn[6].SetActive(true);
         }
     }
 
