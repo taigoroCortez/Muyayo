@@ -32,6 +32,8 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[2].SetActive(false);
             playerInGame[3].SetActive(false);
             playerInGame[4].SetActive(false);
+            playerInGame[5].SetActive(false);
+            playerInGame[6].SetActive(false);
         }
         else if(managerSelectPlayer.playerNum == 2)
         {
@@ -40,6 +42,8 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[2].SetActive(false);
             playerInGame[3].SetActive(false);
             playerInGame[4].SetActive(false);
+            playerInGame[5].SetActive(false);
+            playerInGame[6].SetActive(false);
         }
         else if(managerSelectPlayer.playerNum == 3)
         {
@@ -48,6 +52,8 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[2].SetActive(true);
             playerInGame[3].SetActive(false);
             playerInGame[4].SetActive(false);
+            playerInGame[5].SetActive(false);
+            playerInGame[6].SetActive(false);
         }
         else if (managerSelectPlayer.playerNum == 4)
         {
@@ -56,6 +62,8 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[2].SetActive(false);
             playerInGame[3].SetActive(true);
             playerInGame[4].SetActive(false);
+            playerInGame[5].SetActive(false);
+            playerInGame[6].SetActive(false);
         }
         else if (managerSelectPlayer.playerNum == 5)
         {
@@ -64,6 +72,28 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[2].SetActive(false);
             playerInGame[3].SetActive(false);
             playerInGame[4].SetActive(true);
+            playerInGame[5].SetActive(false);
+            playerInGame[6].SetActive(false);
+        }
+        else if (managerSelectPlayer.playerNum == 6)
+        {
+            playerInGame[0].SetActive(false);
+            playerInGame[1].SetActive(false);
+            playerInGame[2].SetActive(false);
+            playerInGame[3].SetActive(false);
+            playerInGame[4].SetActive(false);
+            playerInGame[5].SetActive(true);
+            playerInGame[6].SetActive(false);
+        }
+        else if (managerSelectPlayer.playerNum == 7)
+        {
+            playerInGame[0].SetActive(false);
+            playerInGame[1].SetActive(false);
+            playerInGame[2].SetActive(false);
+            playerInGame[3].SetActive(false);
+            playerInGame[4].SetActive(false);
+            playerInGame[5].SetActive(false);
+            playerInGame[6].SetActive(true);
         }
     }
 

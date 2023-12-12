@@ -35,11 +35,11 @@ public class ManagerSelectPlayer : MonoBehaviour
 
     public void ChangePlayerSkin()
     {
-        if (playerNum < 5)
+        if (playerNum < 7)
         {
             playerNum++;
         }
-        else if(playerNum == 5)
+        else if(playerNum == 7)
         {
             playerNum = 1;
         }
