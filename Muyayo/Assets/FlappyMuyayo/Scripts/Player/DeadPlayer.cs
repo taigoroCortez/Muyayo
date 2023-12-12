@@ -12,13 +12,16 @@ public class DeadPlayer : MonoBehaviour
     public event Action DiePlayer;
 
     PlayGameScore playGameScore;
-   
+
+    private int countDead = 0;
     Rigidbody2D rb;
 
     PlayerController playerController;
     CameraShake cameraShake;
     private void Awake()
     {
+        countDead = PlayerPrefs.GetInt("DeadPlayer");
+
         rb = GetComponent<Rigidbody2D>();
         cameraShake = FindObjectOfType<CameraShake>();
         playerController = GetComponent<PlayerController>();
@@ -70,6 +73,22 @@ public class DeadPlayer : MonoBehaviour
 
     void Dead()
     {
+        countDead++;
+
+        PlayerPrefs.SetInt("DeadPlayer", countDead);
+        PlayerPrefs.Save();
+
+        if(countDead >= 5)
+        {
+            MyInterstitial myInterstitial;
+            myInterstitial = FindObjectOfType<MyInterstitial>();
+            myInterstitial.ShowInterstitialAd();
+
+            countDead = 0;
+            PlayerPrefs.SetInt("DeadPlayer", countDead);
+            PlayerPrefs.Save();
+        }
+
         playGameScore.SendScore();
         playerController.enabled = false;
         DiePlayer?.Invoke();
