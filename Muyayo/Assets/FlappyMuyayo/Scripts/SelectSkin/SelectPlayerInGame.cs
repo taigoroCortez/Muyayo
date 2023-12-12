@@ -25,7 +25,7 @@ public class SelectPlayerInGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (managerSelectPlayer.player == 1)
+        if (managerSelectPlayer.playerNum == 1)
         {
             playerInGame[0].SetActive(true);
             playerInGame[1].SetActive(false);
@@ -33,7 +33,7 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[3].SetActive(false);
             playerInGame[4].SetActive(false);
         }
-        else if(managerSelectPlayer.player == 2)
+        else if(managerSelectPlayer.playerNum == 2)
         {
             playerInGame[0].SetActive(false);
             playerInGame[1].SetActive(true);
@@ -41,7 +41,7 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[3].SetActive(false);
             playerInGame[4].SetActive(false);
         }
-        else if(managerSelectPlayer.player == 3)
+        else if(managerSelectPlayer.playerNum == 3)
         {
             playerInGame[0].SetActive(false);
             playerInGame[1].SetActive(false);
@@ -49,7 +49,7 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[3].SetActive(false);
             playerInGame[4].SetActive(false);
         }
-        else if (managerSelectPlayer.player == 4)
+        else if (managerSelectPlayer.playerNum == 4)
         {
             playerInGame[0].SetActive(false);
             playerInGame[1].SetActive(false);
@@ -57,7 +57,7 @@ public class SelectPlayerInGame : MonoBehaviour
             playerInGame[3].SetActive(true);
             playerInGame[4].SetActive(false);
         }
-        else if (managerSelectPlayer.player == 5)
+        else if (managerSelectPlayer.playerNum == 5)
         {
             playerInGame[0].SetActive(false);
             playerInGame[1].SetActive(false);

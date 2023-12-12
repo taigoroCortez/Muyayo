@@ -22,7 +22,7 @@ public class Change : MonoBehaviour
     {
         managerSelectPlayer.LoadData();
         
-        if(managerSelectPlayer.player == 1)
+        if(managerSelectPlayer.playerNum == 1)
         {
             go1.gameObject.SetActive(true);
             go2.gameObject.SetActive(false);
@@ -33,7 +33,7 @@ public class Change : MonoBehaviour
             //transform.GetChild(1).gameObject.SetActive(false);
             //transform.GetChild(2).gameObject.SetActive(false);
         }
-        else if(managerSelectPlayer.player == 2)
+        else if(managerSelectPlayer.playerNum == 2)
         {
             go1.gameObject.SetActive(false);
             go2.gameObject.SetActive(true);
@@ -45,7 +45,7 @@ public class Change : MonoBehaviour
             //transform.GetChild(2).gameObject.SetActive(false);
 
         }
-        else if(managerSelectPlayer.player == 3)
+        else if(managerSelectPlayer.playerNum == 3)
         {
             go1.gameObject.SetActive(false);
             go2.gameObject.SetActive(false);
@@ -56,14 +56,14 @@ public class Change : MonoBehaviour
             //transform.GetChild(1).gameObject.SetActive(false);
             //transform.GetChild(2).gameObject.SetActive(true);
         }
-        else if(managerSelectPlayer.player == 4){
+        else if(managerSelectPlayer.playerNum == 4){
             go1.gameObject.SetActive(false);
             go2.gameObject.SetActive(false);
             go3.gameObject.SetActive(false);
             go4.gameObject.SetActive(true);
             go5.gameObject.SetActive(false);
         }
-        else if(managerSelectPlayer.player == 5){
+        else if(managerSelectPlayer.playerNum == 5){
             go1.gameObject.SetActive(false);
             go2.gameObject.SetActive(false);
             go3.gameObject.SetActive(false);

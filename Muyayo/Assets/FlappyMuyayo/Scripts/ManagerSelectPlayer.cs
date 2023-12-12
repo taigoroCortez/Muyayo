@@ -6,10 +6,10 @@ public class ManagerSelectPlayer : MonoBehaviour
 {
     private static ManagerSelectPlayer instance;
     public static ManagerSelectPlayer Instance => instance;
-    
 
-    
-    public int player;
+
+
+    public int playerNum;
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class ManagerSelectPlayer : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        player = 1;
+        playerNum = 1;
     }
 
     private void Start()
@@ -35,13 +35,13 @@ public class ManagerSelectPlayer : MonoBehaviour
 
     public void ChangePlayerSkin()
     {
-        if(player < 5)
+        if (playerNum < 5)
         {
-            player++;
+            playerNum++;
         }
-        else if(player == 5)
+        else if(playerNum == 5)
         {
-            player = 1;
+            playerNum = 1;
         }
         SaveData();
     }

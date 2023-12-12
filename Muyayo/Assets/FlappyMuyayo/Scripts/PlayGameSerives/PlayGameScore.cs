@@ -31,7 +31,7 @@ public class PlayGameScore : MonoBehaviour
         {
             Destroy(this);
         }
-        Initialize();
+        
     }
 
     void Initialize()
