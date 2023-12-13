@@ -19,6 +19,7 @@ public class BirdEnemy_Red : BaseEnemies
     void Update()
     {
         MoveSinEnemies();
+        
     }
 
     void Desactivar()

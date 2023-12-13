@@ -8,10 +8,12 @@ public class ManagersSpawn : MonoBehaviour
 
     private float initTime = 0f;
     private float initTimeBirdPlomo = 0f;
+    private float initTimeBirdBlack = 0f;
     [SerializeField] private float nextSpawnBirdRed = 30f;
     [SerializeField] private float nextSpawnCoinSilver = 30f;
     [SerializeField] private float nextSpawnCoinBronce = 30f;
     [SerializeField] private float nextSpawnBirdPlomo = 60f;
+    [SerializeField] private float nextSpawnBirdBlack = 90f;
 
     private bool activeTimer;
     private void Awake()
@@ -26,6 +28,7 @@ public class ManagersSpawn : MonoBehaviour
         spawn[3].SetActive(false);  //silver
         spawn[4].SetActive(false);  //bronce
         spawn[5].SetActive(false);
+        spawn[6].SetActive(false); //bird black
 
     }
 
@@ -36,6 +39,7 @@ public class ManagersSpawn : MonoBehaviour
         {
             initTime += Time.deltaTime;
             initTimeBirdPlomo += Time.deltaTime;
+            initTimeBirdBlack += Time.deltaTime;
         }
             
 
@@ -55,8 +59,15 @@ public class ManagersSpawn : MonoBehaviour
         if(initTimeBirdPlomo > nextSpawnBirdPlomo)
         {
             spawn[5].SetActive(true);
-            StartCoroutine(DisactiveSpawnBridPlomo());
+            StartCoroutine(DisactiveSpawnBridPlomo(6,5));
             initTimeBirdPlomo = 0f;
+        }
+
+        if(initTimeBirdBlack > nextSpawnBirdBlack)
+        {
+            spawn[6].SetActive(true);
+            StartCoroutine(DisactiveSpawnBridPlomo(2, 6));
+            initTimeBirdBlack = 0f;
         }
     }
 
@@ -69,9 +80,9 @@ public class ManagersSpawn : MonoBehaviour
         spawn[5].SetActive(false);
     }
 
-    IEnumerator DisactiveSpawnBridPlomo()
+    IEnumerator DisactiveSpawnBridPlomo(float time,int numSpawn)
     {
-        yield return new WaitForSeconds(6);
-        spawn[5].SetActive(false);
+        yield return new WaitForSeconds(time);
+        spawn[numSpawn].SetActive(false);
     }
 }

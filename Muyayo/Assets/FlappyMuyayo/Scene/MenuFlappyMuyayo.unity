@@ -1020,6 +1020,7 @@ Transform:
   - {fileID: 1803496202}
   - {fileID: 1354481152}
   - {fileID: 2121772468}
+  - {fileID: 595613768}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1042,10 +1043,12 @@ MonoBehaviour:
   - {fileID: 1803496201}
   - {fileID: 1354481151}
   - {fileID: 2121772467}
+  - {fileID: 595613767}
   nextSpawnBirdRed: 60
   nextSpawnCoinSilver: 30
   nextSpawnCoinBronce: 30
   nextSpawnBirdPlomo: 60
+  nextSpawnBirdBlack: 90
 --- !u!1 &568314741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1099,56 @@ Transform:
   m_Father: {fileID: 484348154}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &595613767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 595613768}
+  - component: {fileID: 595613769}
+  m_Layer: 0
+  m_Name: SpawnBirdBlack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &595613768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595613767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: -3.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 484348154}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595613769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595613767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332303bbf83f94247878a5ac028e6b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8960215932369061083, guid: e13a2c9ae8a37464d8c2c4d11a5ffe35, type: 3}
+  poolSize: 2
+  spawnTime: 1
+  XspawnPosition: 5
+  yMinPosition: -3.5
+  yMaxPosition: 2
 --- !u!1001 &663156477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1787,7 +1840,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.19
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3660,6 +3713,10 @@ PrefabInstance:
     - target: {fileID: 1928256420393980394, guid: 9880d0d89d0eb6b4e8a566cc07cb7edc, type: 3}
       propertyPath: m_Name
       value: SoundBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928256420393980395, guid: 9880d0d89d0eb6b4e8a566cc07cb7edc, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9880d0d89d0eb6b4e8a566cc07cb7edc, type: 3}
