@@ -21,11 +21,13 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
-    ignoreMasterTextureLimit: 0
+    ignoreMipmapLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -47,6 +49,7 @@ ScriptedImporter:
     flipbookRows: 0
     flipbookColumns: 0
     ignorePngGamma: 0
+    cookieMode: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -87,8 +90,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: Fondo copia
@@ -502,8 +505,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -183, y: -293}
+    uvTransform: {x: 4, y: -99}
+    spritePosition: {x: 157, y: 359}
   - name: Capa 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -511,8 +514,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 543
+      x: 586
+      y: 4
       width: 312
       height: 322
     spriteID: ec73c23f2c04a644b929c1f3872b8c7c
@@ -851,8 +854,8 @@ ScriptedImporter:
     - {x: 26, y: 27}
     - {x: 27, y: 28}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -266, y: 138}
+    uvTransform: {x: 586, y: 4}
+    spritePosition: {x: 270, y: 405}
   - name: Capa 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -860,8 +863,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 324
-      y: 543
+      x: 586
+      y: 334
       width: 0
       height: 0
     spriteID: 170e7b27a1a3db749b73b15ea7585b0c
@@ -872,8 +875,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -700, y: -481}
+    uvTransform: {x: 586, y: 334}
+    spritePosition: {x: 0, y: 1024}
   characterData:
     bones:
     - name: bone_1
@@ -924,6 +927,7 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   sharedRigSpriteImportData: []
   sharedRigCharacterData:
@@ -931,6 +935,7 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   platformSettings: []
   mosaicLayers: 1
@@ -943,6 +948,8 @@ ScriptedImporter:
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
   spriteCategoryList:
     categories: []
   spritePackingTag: 
@@ -965,7 +972,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: ec73c23f2c04a644b929c1f3872b8c7c
     layerID: 3
-    mosaicPosition: {x: 4, y: 543}
+    mosaicPosition: {x: 586, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -975,12 +982,15 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 170e7b27a1a3db749b73b15ea7585b0c
     layerID: 2
-    mosaicPosition: {x: 324, y: 543}
+    mosaicPosition: {x: 586, y: 334}
     flatten: 0
     isImported: 1
     isVisible: 1
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 
   prefabAssetName: 
