@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
                 transform.GetChild(2).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 25f));
                 transform.GetChild(3).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 25f));
                 transform.GetChild(4).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 25f));
+                transform.GetChild(5).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 25f));
+                transform.GetChild(6).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 25f));
             }
             else
             {
@@ -67,6 +69,8 @@ public class PlayerController : MonoBehaviour
                 transform.GetChild(2).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -25f));
                 transform.GetChild(3).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -25f));
                 transform.GetChild(4).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -25f));
+                transform.GetChild(5).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -25f));
+                transform.GetChild(6).gameObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, -25f));
             }
         }
 
